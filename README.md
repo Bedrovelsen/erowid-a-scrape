@@ -12,6 +12,8 @@ Giving an [older project](https://github.com/Bedrovelsen/erowid-a-scrape/raw/mas
 
 ---
 
+_**Current Functionality**:_
+- Outputs links based on hardcoded initial single index list starting URL
 
 ``` bash
 > go run eroscrape.go
@@ -34,3 +36,7 @@ ExperienceVaultURL:  https://erowid.org/experiences/exp.php?ID=73483
 DaturaExperienceURL:  https://erowid.org/experiences/exp.php?ID=29
 DaturaExperienceURL:  https://erowid.org/experiences/exp.php?ID=28
 ```
+
+_**Next Up:**_
+- Fetching the experience report text from each URL gathered.
+- Parse the report into plain text die to the vault's often variant consistancy on text encoding mistakes and report page HTML layout
