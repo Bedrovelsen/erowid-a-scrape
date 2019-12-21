@@ -13,30 +13,46 @@ Giving an [older project](https://github.com/Bedrovelsen/erowid-a-scrape/raw/mas
 ---
 
 _**Current Functionality**:_
-- Outputs links based on hardcoded initial single index list starting URL
+- Grabs report links based on hardcoded vault category index page URL and outputs to links.lst
+- Appends report text from each page in list of links generated to master corpusText and outputs to corpus.text
 
 ``` bash
 > go run eroscrape.go
-ExperienceVaultURL:  https://erowid.org/experiences/exp.cgi?S1=15&ShowViews=0&Cellar=0&Start=0&Max=500
-ExperienceVaultURL:  https://erowid.org/experiences/exp.php?ID=16996
-ExperienceVaultURL:  https://erowid.org/experiences/exp.php?ID=16973
-ExperienceVaultURL:  https://erowid.org/experiences/exp.php?ID=29874
-ExperienceVaultURL:  https://erowid.org/experiences/exp.php?ID=11686
-ExperienceVaultURL:  https://erowid.org/experiences/exp.php?ID=11218
-ExperienceVaultURL:  https://erowid.org/experiences/exp.php?ID=3286
-ExperienceVaultURL:  https://erowid.org/experiences/exp.php?ID=92059
-ExperienceVaultURL:  https://erowid.org/experiences/exp.php?ID=94567
-ExperienceVaultURL:  https://erowid.org/experiences/exp.php?ID=67153
-ExperienceVaultURL:  https://erowid.org/experiences/exp.php?ID=71409
-ExperienceVaultURL:  https://erowid.org/experiences/exp.php?ID=78740
-ExperienceVaultURL:  https://erowid.org/experiences/exp.php?ID=73483
-```
-...
-``` bash
-DaturaExperienceURL:  https://erowid.org/experiences/exp.php?ID=29
-DaturaExperienceURL:  https://erowid.org/experiences/exp.php?ID=28
+Starting erowid-a-scrape
+[erowid experience report text corpus generation]
+
+Report index base URL: https://erowid.org/experiences/exp.cgi?S1=15&ShowViews=0&Cellar=0&Start=0&Max=500
+Finished getting report URLs
+Report URLs written to file links.lst
+Finished fetching reports into text corpus
+Text corpus written to file corpus.txt
+Erowid-a-scrape finished
+
+> tail links.lst 
+https://erowid.org/experiences/exp.php?ID=2862
+https://erowid.org/experiences/exp.php?ID=2819
+https://erowid.org/experiences/exp.php?ID=1829
+https://erowid.org/experiences/exp.php?ID=1828
+https://erowid.org/experiences/exp.php?ID=1827
+https://erowid.org/experiences/exp.php?ID=1821
+https://erowid.org/experiences/exp.php?ID=1820
+https://erowid.org/experiences/exp.php?ID=1819
+https://erowid.org/experiences/exp.php?ID=29
+https://erowid.org/experiences/exp.php?ID=28
+
+> tail corpus.txt 
+ No loss of memory or mental faculties though.
+ At some point I feel asleep with completely lucid dreams that were indistinguishable from reality.
+ I walked around the house talked to people even though I was making people do things by thought, until I realized I was still in bed.
+ It was so vivid I repeated the same thing scientifically five times or so to see if it was real or not.
+ I couldn't come to any conclusion.
+ I slept for maybe six hours and with great difficulty got out of bed.
+ However, once out everything was clear, and normal.
+ No pupil dilation, some dry throat, but otherwise normal.
+ If not a bit relaxed and clear headed.
+ For me it was definitely a pleasurable experience.
 ```
 
 _**Next Up:**_
-- Fetching the experience report text from each URL gathered.
-- Parse the report into plain text die to the vault's often variant consistancy on text encoding mistakes and report page HTML layout
+- ~~Fetching the experience report text from each URL gathered.~~ [Done]
+- Parse / clean up the corpus text into plain formatting type due to he vault's often variant consistancy on text encoding mistakes and report page HTML layout
