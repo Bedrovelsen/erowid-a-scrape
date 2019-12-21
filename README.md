@@ -18,33 +18,6 @@ _**Current Functionality**:_
 
 ``` bash
 > go run eroscrape.go
-
-```
-
-_**Next Up:**_
-- Fetching the experience report text from each URL gathered.
-- Parse / clean up the corpus text into plain formatting type due to he vault's often variant consistancy on text encoding mistakes and report page HTML layout
-
-# erowid-a-scrape
-### Golang based [Erowid Experience Vaults](https://erowid.org/experiences/exp_front.shtml) scraper helper code made with [Colly](https://github.com/gocolly/colly)
-
----
-**Motivation**
-
-Giving an [older project](https://github.com/Bedrovelsen/erowid-a-scrape/raw/master/daturagen3.png) relating to datura experince reports new life with the goals being
-
->>>
-1) Automating text corpus creation instead of former project's manually fetched & parsed thus error filled text corpus file
-2) Applying the text corpus generation and prior projects single substance only to any substance with reports in the erowid experince vaults via dropdown picker just like on the home page of erowids experience vaults.
-
----
-
-_**Current Functionality**:_
-- Grabs report links based on hardcoded vault category index page URL and outputs to links.lst
-- Appends report text from each page in list of links generated to master corpusText and outputs to corpus.text
-
-``` bash
-> go run eroscrape.go
 Starting erowid-a-scrape
 [erowid experience report text corpus generation]
 
@@ -55,7 +28,7 @@ Finished fetching reports into text corpus
 Text corpus written to file corpus.txt
 Erowid-a-scrape finished
 
-> tail links.lst
+> tail links.lst 
 https://erowid.org/experiences/exp.php?ID=2862
 https://erowid.org/experiences/exp.php?ID=2819
 https://erowid.org/experiences/exp.php?ID=1829
@@ -67,11 +40,7 @@ https://erowid.org/experiences/exp.php?ID=1819
 https://erowid.org/experiences/exp.php?ID=29
 https://erowid.org/experiences/exp.php?ID=28
 
-> tail corpus.txt
- No loss of memory or mental faculties though.
- At some point I feel asleep with completely lucid dreams that were indistinguishable from reality.
  I walked around the house talked to people even though I was making people do things by thought, until I realized I was still in bed.
- It was so vivid I repeated the same thing scientifically five times or so to see if it was real or not.
  I couldn't come to any conclusion.
  I slept for maybe six hours and with great difficulty got out of bed.
  However, once out everything was clear, and normal.
